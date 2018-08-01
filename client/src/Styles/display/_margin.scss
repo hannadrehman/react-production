@@ -1,0 +1,104 @@
+@import '../variables/variables';
+
+.margin{
+  &--auto{
+    margin: 0 auto;
+  }
+  &--remove{
+    margin: 0;
+  }
+  &--xs{
+    margin: $px4;
+  }
+  &--sm{
+    margin: $px8;
+  }
+  &--md{
+    margin: $px12;
+  }
+  &--lg{
+    margin: $px16;
+  }
+  &--xlg{
+    margin: $px20;
+  }
+  &--xxlg{
+    margin: $px24;
+  }
+
+  &-top--xs{
+    margin-top: $px4;
+  }
+  &-top--sm{
+    margin-top: $px8;
+  }
+  &-top--md{
+    margin-top: $px12;
+  }
+  &-top--lg{
+    margin-top: $px16;
+  }
+  &-top--xlg{
+    margin-top: $px20;
+  }
+  &-top--xxlg{
+    margin-top: $px24;
+  }
+
+  &-left--xs{
+    margin-left: $px4;
+  }
+  &-left--sm{
+    margin-left: $px8;
+  }
+  &-left--md{
+    margin-left: $px12;
+  }
+  &-left--lg{
+    margin-left: $px16;
+  }
+  &-left--xlg{
+    margin-left: $px20;
+  }
+  &-left--xxlg{
+    margin-left: $px24;
+  }
+
+  &-bottom--xs{
+    margin-right: $px4;
+  }
+  &-right--sm{
+    margin-right: $px8;
+  }
+  &-right--md{
+    margin-right: $px12;
+  }
+  &-right--lg{
+    margin-right: $px16;
+  }
+  &-right--xlg{
+    margin-right: $px20;
+  }
+  &-right--xxlg{
+    margin-right: $px24;
+  }
+
+  &-bottom--xs{
+    margin-bottom: $px4;
+  }
+  &-bottom--sm{
+    margin-bottom: $px8;
+  }
+  &-bottom--md{
+    margin-bottom: $px12;
+  }
+  &-bottom--lg{
+    margin-bottom: $px16;
+  }
+  &-bottom--xlg{
+    margin-bottom: $px20;
+  }
+  &-bottom--xxlg{
+    margin-bottom: $px24;
+  }
+}

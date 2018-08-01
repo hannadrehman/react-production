@@ -1,0 +1,38 @@
+.errorhandler {
+  @at-root #{&}__wrapper {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  @at-root #{&}__image {
+    width: 100px;
+  }
+  @at-root #{&}__stacktrace {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffefef;
+    overflow: auto;
+    padding: 20px;
+    color: #8d2424;
+    font-weight: 500;
+    font-size: 14px;
+    opacity: 0.98;
+  }
+  @at-root #{&}__errortrace {
+    margin: 10px 0;
+  }
+  @at-root #{&}__infotrace {
+    margin: 10px 0;
+  }
+  pre{
+    margin: 0
+  }
+  p{
+    font-weight: bold;
+  }
+}

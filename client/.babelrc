@@ -1,0 +1,39 @@
+{
+  "presets": [["env", { "modules": false }], "react"],
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "syntax-dynamic-import",
+    ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": true }],
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "App": "./src/App",
+          "Common": "./src/App/Common",
+          "Elements": "./src/App/Elements",
+          "Router": "./src/App/Router",
+          "Constants": "./src/Constants",
+          "Services": "./src/Services",
+          "Store": "./src/Store",
+          "Styles": "./src/Styles",
+          "Assets": "./src/Assets"
+        }
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "presets": [["env", { "modules": false }], "react"],
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        "transform-object-rest-spread",
+        "transform-class-properties",
+        "syntax-dynamic-import",
+        ["import", { "libraryName": "antd", "style": "css" }]
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+**/dist/**
+**/node_modules/**
+**/webpack.config*.js
+**/tests/**
+src/Assets/**
+build-config/**/*.js

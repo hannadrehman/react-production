@@ -1,0 +1,37 @@
+@import "../variables/variables";
+
+.font {
+  &--xs {
+    font-size: $px8;
+  }
+  &--sm {
+    font-size: $px12;
+  }
+  &--md {
+    font-size: $px16;
+  }
+  &--lg {
+    font-size: $px20;
+  }
+  &--xlg {
+    font-size: $px24;
+  }
+  &--bold {
+    font-weight: 500;
+  }
+  &--semi-bold {
+    font-weight: 400;
+  }
+}
+
+.text {
+  &-left {
+    text-align: left;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-center {
+    text-align: center;
+  }
+}

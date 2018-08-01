@@ -1,0 +1,14 @@
+.tbody {
+  &__wrapper{
+    position: relative;
+    p{
+      &:hover{
+        background-color: black;
+        color:white;
+      }
+    }
+    .done{
+      text-decoration: line-through
+    }
+  }
+}

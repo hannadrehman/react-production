@@ -1,0 +1,98 @@
+@import "../variables/variables";
+
+.padding {
+  &--xsm {
+    padding: $px4;
+  }
+  &--sm {
+    padding: $px8;
+  }
+  &--md {
+    padding: $px12;
+  }
+  &--lg {
+    padding: $px16;
+  }
+  &--xlg {
+    padding: $px20;
+  }
+  &--xxlg {
+    padding: $px24;
+  }
+
+  &-left--xsm {
+    padding-left: $px4;
+  }
+  &-left--sm {
+    padding-left: $px8;
+  }
+  &-left--md {
+    padding-left: $px12;
+  }
+  &-left--lg {
+    padding-left: $px16;
+  }
+  &-left--xlg {
+    padding-left: $px20;
+  }
+  &-left--xxlg {
+    padding-left: $px24;
+  }
+
+  &-right--xsm {
+    padding-right: $px4;
+  }
+  &-right--sm {
+    padding-right: $px8;
+  }
+  &-right--md {
+    padding-right: $px12;
+  }
+  &-right--lg {
+    padding-right: $px16;
+  }
+  &-right--xlg {
+    padding-right: $px20;
+  }
+  &-right--xxlg {
+    padding-right: $px24;
+  }
+
+  &-top--xsm {
+    padding-top: $px4;
+  }
+  &-top--sm {
+    padding-top: $px8;
+  }
+  &-top--md {
+    padding-top: $px12;
+  }
+  &-top--lg {
+    padding-top: $px16;
+  }
+  &-top--xlg {
+    padding-top: $px20;
+  }
+  &-top--xxlg {
+    padding-top: $px24;
+  }
+
+  &-bottom--xsm {
+    padding-bottom: $px4;
+  }
+  &-bottom--sm {
+    padding-bottom: $px8;
+  }
+  &-bottom--md {
+    padding-bottom: $px12;
+  }
+  &-bottom--lg {
+    padding-bottom: $px16;
+  }
+  &-bottom--xlg {
+    padding-bottom: $px20;
+  }
+  &-bottom--xxlg {
+    padding-bottom: $px24;
+  }
+}
