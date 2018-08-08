@@ -38,6 +38,9 @@ jspm_packages
 
 # Dist
 dist
+**/dist
+**dist/**
+dist/**
 
 # Test shapShots
 **/__snapshots__/
