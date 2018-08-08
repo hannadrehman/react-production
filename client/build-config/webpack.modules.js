@@ -3,6 +3,7 @@ const path = require('path');
 const AntdScssThemePlugin = require('antd-scss-theme-plugin');
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const cssnano = require('cssnano')
 
 module.exports = (env) => {
   const isProd = env.NODE_ENV.trim().toLowerCase() === 'production';
@@ -58,7 +59,7 @@ module.exports = (env) => {
                 sourceMap: false,
                 include: path.resolve(__dirname, '../', './src'),
                 plugins() {
-                  return [autoprefixer('last 2 versions', 'ie 10')];
+                  return [autoprefixer('last 2 versions', 'ie 10'),cssnano()];
                 },
               },
             },
@@ -81,7 +82,7 @@ module.exports = (env) => {
                 sourceMap: false,
                 include: path.resolve(__dirname, '../', './src'),
                 plugins() {
-                  return [autoprefixer('last 2 versions', 'ie 10')];
+                  return [autoprefixer('last 2 versions', 'ie 10'),cssnano()];
                 },
               },
             },
@@ -114,7 +115,7 @@ module.exports = (env) => {
                 sourceMap: false,
                 include: path.resolve(__dirname, '../', './src'),
                 plugins() {
-                  return [autoprefixer('last 2 versions', 'ie 10')];
+                  return [autoprefixer('last 2 versions', 'ie 10'),cssnano()];
                 },
               },
             },
