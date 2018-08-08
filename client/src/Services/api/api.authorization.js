@@ -46,8 +46,8 @@ export const getNewApiUrl = (url) => {
 export const getApiHeaders = () => ({
   'X-CSRFToken': getCsrfToken(),
 });
-
-if (window.location.origin === DEV_ORIGIN) {
+// will allow login only when we are proxying to stage and is on Dev url
+if (window.location.origin === DEV_ORIGIN && process.env.NODE_ENV === 'development') {
   window.attemptLogin = () => axios.post(APP_LOGIN, {
     username: USER_ONE_NAME, password: USER_ONE_PAS,
   })
