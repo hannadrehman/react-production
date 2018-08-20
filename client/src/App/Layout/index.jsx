@@ -6,6 +6,7 @@ import {
 import { Link } from 'react-router-dom';
 import Routes from 'Router';
 
+import './styles.scss';
 
 const { Header, Content, Footer } = Layout;
 
@@ -35,7 +36,9 @@ render() {
     <Layout className="applayout layout">
       <Header>
         <Link href="/" to="/">
-          <div className="logo" />
+          <p className="logo">
+            Refund Manager
+          </p>
         </Link>
         <Menu
           theme="dark"
@@ -44,18 +47,13 @@ render() {
           style={{ lineHeight: '64px' }}
         >
           <Menu.Item key="1">
-            <Link href="/profile" to="/profile">
-              Profile
+            <Link href="/record" to="/profile">
+              Refund Record
             </Link>
           </Menu.Item>
           <Menu.Item key="2">
-            <Link href="/about" to="/about">
-              About us
-            </Link>
-          </Menu.Item>
-          <Menu.Item key="3">
-            <Link href="/todo" to="/todo">
-              Todo
+            <Link href="/approve" to="/about">
+              Refund Approval
             </Link>
           </Menu.Item>
         </Menu>

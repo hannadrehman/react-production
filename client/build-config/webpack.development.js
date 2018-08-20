@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const appPaths = require('./webpack.paths');
 const appModule = require('./webpack.modules');
 const devServer = require('./webpack.devserver');
+// const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 
 module.exports = env => ({
@@ -36,4 +37,7 @@ module.exports = env => ({
     }),
   ],
   devServer: devServer(appPaths.distPath, env.PROXY_ORIGIN),
+  optimization: {
+    runtimeChunk: true,
+  },
 });

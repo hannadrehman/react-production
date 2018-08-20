@@ -25,7 +25,7 @@ module.exports = (env) => {
       break;
     case 'speedmeasure': {
       const smp = new SpeedMeasurePlugin();
-      webpackConfig = webpackMerge(baseConfig, bundleBuddy);
+      webpackConfig = webpackMerge(baseConfig);
       webpackConfig = smp.wrap(webpackConfig);
     }
       break;
