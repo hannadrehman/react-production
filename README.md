@@ -1,5 +1,21 @@
 # React FullStack
-this project requires 
+
+## info
+a complete projet for react procution grade project with 
+1. react, redux , redux sagas
+2. eslint
+3. customizable build config
+4. jest and enzyme test framework
+5. babel and eslint config to support es2017
+6. react hot module replacement
+7. code spliting
+8. code organisation based on "Feature first approach"
+9. expressJs as a web server for serving static files. 
+10. a simple starter kit for express nodejs app with proxy, lint, and configuration based on ENV variables.
+
+
+**this project requires** 
+
 1. `NodeJS`
 2. `npm`.
 3. `python 2.7` which may change in future
@@ -53,3 +69,19 @@ its best to use vs code with the following plugins installed.
 1. EditorConfig for VS Code
 2. EsLint
 3. Prettier - code formatter
+
+
+## under the hood
+ - [Node.js](https://nodejs.org/en/)
+ - [Express](https://github.com/expressjs/express)
+ - [React](https://github.com/facebook/react)
+ - [Redux](https://github.com/reactjs/redux)
+ - [Sagas](https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html)
+ - [React Router v4](https://github.com/reactjs/react-router)
+ - [Axios](https://github.com/axios/axios) 
+ - [AntD with scss](https://ant.design/) 
+ - [Webpack 4](https://github.com/webpack/webpack) with code splitting
+ - [React Hot Loader](https://github.com/gaearon/react-hot-loader)
+ - [Jest](https://jestjs.io/)
+ - [Enzyme](https://airbnb.io/enzyme/)
+ - [ESLint](https://eslint.org/)
