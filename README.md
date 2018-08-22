@@ -1,7 +1,7 @@
 # React FullStack
 
 ## info
-  a complete projet for react procution grade project with :
+  a complete projet for react production grade project with :
   1. react, redux , redux sagas
   2. eslint
   3. customizable build config
@@ -34,10 +34,11 @@ React full stack has 2 main applications.
 
 ### Install
   to install and run this project you need to 
-  1. download and run client applicarion 
-  2. download and run server application
+  1. install node modules and run client applicarion 
+  2. install node modules and run  server application
 
    `cd client` and hit `npm install`
+
    `cd server` and hit `npm install`
 
 ### start
@@ -46,16 +47,16 @@ React full stack has 2 main applications.
   in the browser.
 
 ### build
-  to build for deployment.
+  to build for deployment/production.
   1. go to server folder and hit `npm run build`
   2. wait for server build to finish 
   3. go to client folder and hit `npm run build`
 
   doing this will create a `dist` folder in the application root which will contain a full stack build
-  'nodejs` application redy to deploy.
+  `nodejs` application redy to deploy with its own `package.json` install node modules and run the app.
 
 **important**
-  to run build application it needs following environment variables
+  to run the built application it needs following environment variables
   1. `NODE_ENV`='production'
   2. `NODE_ENV_PORT`='3000' or any available port
 
