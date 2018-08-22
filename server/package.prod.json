@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "react-fullstack",
   "version": "1.0.0",
   "description": "a simple static web server",
   "main": "index.js",
