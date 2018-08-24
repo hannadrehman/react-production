@@ -13,12 +13,4 @@ const render = (Component, store) => {
     document.getElementById('root'),
   );
 };
-// if (module.hot) {
-//   module.hot.accept('App', () => {
-//     render(App, reduxStore);
-//     // const NewApp = require('App').default; // eslint-disable-line
-//     // render(NewApp, reduxStore);
-//   });
-// }
-
 render(App, reduxStore);

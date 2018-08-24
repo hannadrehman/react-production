@@ -101,6 +101,10 @@ its best to use vs code with the following plugins installed.
  ├── /.build.js                 # contains small build config written in js executed by nodejs
  ├── /.package.json             # dependencies for client app
  ├── /.package-lock.json        # dependencies lock
+ ├── /README.md                 # instructions and help
+ ├── /LICENSE                   # license details
+ ├── /CHANGELOG.md              # all changes mentioned 
+
 ```
 
 **src folder**
