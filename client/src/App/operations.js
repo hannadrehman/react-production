@@ -3,7 +3,7 @@ import { put } from 'redux-saga/effects';
 import {
   userProfile,
   userProfileExtras,
-} from '../Services/api/api.requests';
+} from 'Services/api/api.requests';
 
 import {
   globalFetchUserProfileLoading,

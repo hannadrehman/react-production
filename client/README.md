@@ -250,17 +250,17 @@ without opening the component definition.
 ```
 Store
   ├── App                    # contains app global data, can be a nested obect
-  ├    ├──AppGlobals 
-  ├    ├──AppContext 
-  ├    ├──AppConfiguration 
-  ├    ├──AppVersion 
+  ├    ├──AppGlobals
+  ├    ├──AppContext
+  ├    ├──AppConfiguration
+  ├    ├──AppVersion
   ├── User                   # User related data
-  ├    ├──UserGlobals 
-  ├    ├──UserProfile 
-  ├    ├──UserConfiguration 
-  ├    ├──UserConrexr 
+  ├    ├──UserGlobals
+  ├    ├──UserProfile
+  ├    ├──UserConfiguration
+  ├    ├──UserConrexr
   ├── SubApps                # Seperate store for each sub application/routes
-  ├    ├──Home 
+  ├    ├──Home
   ├    ├──Profile
   ├    ├──Todo
   ├    ├──About
@@ -269,3 +269,115 @@ Store
 
 maintaining the same hierarchy in redux store has many benifits. one of them is code organizastion.
 each sub application has a `reducer`,`sagas` which are default exported and combined and given to the store.
+
+## Handeling side effects with sagas
+
+front end application is all about handling side effects. for us the most important side effects are the api calls.
+apis give us external data and our react components should be able to handle them without making it complicated.
+
+the best practice is to have react components onlt handle the view. no additional logic. that even includes making api calls.
+react component should not be concerned about how the data is fetched from external source. it should only consider the data passed to it
+as a props. thats why we are handling external data outside the component echosystem. and passing objects to the components as props.
+
+### why sagas ?
+
+there are other alternatives to manage side effects one them is [thunk](https://github.com/reduxjs/redux-thunk). thunks are good but the problem is
+thunks are very painful to unit test.
+
+sagas use `generator` functions to handle the async tasks which makes it unit testable.
+
+## Saga Data structure for apis.
+
+Every Api calls in most of the cases will have 3 states.
+
+1. Loading
+2. Success
+3. Failure
+
+at one instant of time there will be only one of these three states . and we can show accordiing Ux as per the state. ex
+
+1. Loading state => show a loader/loading screen
+2. Success state => show the actual data
+3. Failure state => show error fallback/alert/toas etc.
+
+storing all three states in store has good benifits. there will be no useless logic with respect to maintaing these states
+
+it can be passed as props to the component, and thus component will re-render automatically when state changes, and our fallbacks will render
+automatically.
+
+there is less code in the component. component will focus on view layer only.
+
+so we data point which needs to be stored in the redux store, must have these three states. ex.
+
+`home reducer` stores `homeTiles` from an api. so our redcuer will have
+
+```
+ var home = {
+   loading:false,
+   data: null,
+   error: null
+ }
+```
+
+and for each state change a action has to be dispatched which `saga operation` will take care of.
+
+```
+import { put } from 'redux-saga/effects';
+
+import {
+  homeTiles,
+} from 'Services/api/api.requests';
+
+import {
+  HomeFetchHomeTilesLoading,
+  HomeFetchHomeTilesSuccess,
+  HomeFetchHomeTilesFailure,
+} from './actions';
+
+export function* fetchUserProfileSaga() {
+  try {
+    yield put(HomeFetchHomeTilesLoading()); // dispatched loading action which reducer will set loading state
+    const profile = yield homeTiles(); // yeilds homeTiles when promise is success
+    yield put(globalFetchUserProfileSuccess(profile)); // dispatched data as success action
+  } catch (e) {
+    yield put(globalFetchUserProfileFailure(e)); // dispatched error when api fails.
+  }
+}
+```
+
+**home reducer**
+
+```
+import homeActionNames from './actionNames';
+
+const defaultState =  {
+   loading:false,
+   data: null,
+   error: null
+ }
+const homeReducer = (state = defaultState, actions) => {
+  switch (actions.type) {
+    case homeActionNames.FETCH_HOME_TILES_LOADING:
+      return {
+        ...state,
+        loading: true
+      }
+    case homeActionNames.FETCH_HOME_TILES_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        data: action.payload
+      }
+    case homeActionNames.FETCH_HOME_TILES_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload
+      }
+    default:
+      return state;
+  }
+};
+
+export default homeReducer;
+```
