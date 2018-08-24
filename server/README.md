@@ -20,10 +20,10 @@
 
   install node modules and run  server application
   - hit `npm install`
-  - use vs code for best developer experience. 
-  - download EditorConfig for VS Code
-  - download EsLint for vs code
-  - download Prettier - code formatter for vs code.
+  - use `vs code` for best developer experience. 
+  - download `EditorConfig for VS Code`
+  - download `EsLint` for vs code
+  - download `Prettier - code formatter` for vs code.
   - you try other code editors also. as long as they support the above mentioned pluguns.
 
 ### start
@@ -64,7 +64,7 @@
  - [ESLint](https://eslint.org/)
  - [Morgan](https://github.com/expressjs/morgan)
  - [Helmet](https://helmetjs.github.io/)
- - [http-proxy-middleware'](https://github.com/chimurai/http-proxy-middleware)
+ - [http-proxy-middleware](https://github.com/chimurai/http-proxy-middleware)
 
 
 ## recommendations
