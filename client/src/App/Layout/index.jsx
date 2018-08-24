@@ -47,13 +47,8 @@ render() {
           style={{ lineHeight: '64px' }}
         >
           <Menu.Item key="1">
-            <Link href="/record" to="/profile">
-              Refund Record
-            </Link>
-          </Menu.Item>
-          <Menu.Item key="2">
-            <Link href="/approve" to="/about">
-              Refund Approval
+            <Link href="/todo" to="/todo">
+              Todo
             </Link>
           </Menu.Item>
         </Menu>

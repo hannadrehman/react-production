@@ -1,6 +1,7 @@
 /* eslint-env node */
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
 const appPaths = require('./webpack.paths');
 const appModule = require('./webpack.modules');
 const devServer = require('./webpack.devserver');
@@ -35,6 +36,7 @@ module.exports = env => ({
         context: './',
       },
     }),
+    new ErrorOverlayPlugin(),
   ],
-  devServer: devServer(appPaths.distPath, env.PROXY_ORIGIN),
+  devServer: devServer(appPaths.distPath, env.PROXY_ORIGIN, env.MIN_STATS),
 });
