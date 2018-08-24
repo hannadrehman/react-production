@@ -334,13 +334,13 @@ import {
   HomeFetchHomeTilesFailure,
 } from './actions';
 
-export function* fetchUserProfileSaga() {
+export function* fetchHomeTilesSaga() {
   try {
     yield put(HomeFetchHomeTilesLoading()); // dispatched loading action which reducer will set loading state
     const profile = yield homeTiles(); // yeilds homeTiles when promise is success
-    yield put(globalFetchUserProfileSuccess(profile)); // dispatched data as success action
+    yield put(globalFetchHomeTilesSuccess(profile)); // dispatched data as success action
   } catch (e) {
-    yield put(globalFetchUserProfileFailure(e)); // dispatched error when api fails.
+    yield put(globalFetchHomeTilesFailure(e)); // dispatched error when api fails.
   }
 }
 ```
