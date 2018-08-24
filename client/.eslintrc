@@ -1,3 +1,38 @@
 {
-  "extends": "webpack"
+  "env": {
+    "browser": true,
+    "node": false,
+    "jest": true
+  },
+  "plugins": [ "import"],
+  "extends": [
+    "airbnb",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "globals": {},
+  "parser": "babel-eslint",
+  "rules": {
+    "react/forbid-prop-types": [false, { "forbid": ["array","object"]}]
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {
+        "root": ["./src"],
+        "alias": {
+          "App": "./src/App",
+          "SubApps": "./src/App/SubApps",
+          "Common": "./src/App/Common",
+          "Router": "./src/App/Router",
+          "Elements": "./src/App/Elements",
+          "Routes": "./src/App/Routes",
+          "Constants": "./src/Constants",
+          "Services": "./src/Services",
+          "Store": "./src/Store",
+          "Styles": "./src/Styles",
+          "Assets": "./src/Assets"
+        }
+      }
+    }
+  }
 }

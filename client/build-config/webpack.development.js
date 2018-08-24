@@ -37,7 +37,4 @@ module.exports = env => ({
     }),
   ],
   devServer: devServer(appPaths.distPath, env.PROXY_ORIGIN),
-  optimization: {
-    runtimeChunk: true,
-  },
 });

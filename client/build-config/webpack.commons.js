@@ -4,7 +4,7 @@ const appPaths = require('./webpack.paths');
 module.exports = (env) => {
   const isProd = env.NODE_ENV.trim().toLowerCase() === 'production';
   const config = {
-    devtool: isProd ? false : 'source-map',
+    devtool: isProd ? 'source-map' : 'eval',
     entry: ['./src/index.jsx'],
     output: {
       path: appPaths.distPath,

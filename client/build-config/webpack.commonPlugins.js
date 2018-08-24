@@ -4,7 +4,8 @@ const SystemBellPlugin = require('system-bell-webpack-plugin');
 const AntdScssThemePlugin = require('antd-scss-theme-plugin');
 // const ManifestPlugin = require('webpack-manifest-plugin');
 // var HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
-const appPath = require('./webpack.paths');
+// const appPath = require('./webpack.paths');
+
 module.exports = {
   plugins: [
     new webpack.ProgressPlugin(),
@@ -14,10 +15,10 @@ module.exports = {
     // new ManifestPlugin({
     //   writeToFileEmit: true
     // }),
-    new  webpack.DllPlugin({
-      path: appPath.distPath+'manifest.json',
-      context: __dirname
-    }),
+    // new webpack.DllPlugin({
+    //   path: `${appPath.distPath}manifest.json`,
+    //   context: __dirname,
+    // }),
     // new HardSourceWebpackPlugin()
   ],
 };

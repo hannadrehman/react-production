@@ -2,7 +2,7 @@
 const path = require('path');
 
 module.exports = {
-  distPath: path.resolve(__dirname, '../', 'dist/public'),
+  distPath: path.resolve(__dirname, '../../', 'dist/public'),
   appTitle: 'React Application',
   cleanOptions: {
     root: path.resolve(__dirname, '../'),
