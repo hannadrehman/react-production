@@ -2,7 +2,7 @@
 
 ## info
 
-a complete projet for react production grade project with :
+a complete react project with :
 
 1. react, redux , redux sagas
 2. eslint
