@@ -47,3 +47,5 @@ coverage
 
 # cacheloader
 .cache-loader
+
+.DS_Store

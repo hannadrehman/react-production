@@ -1,10 +1,11 @@
 {
-  "name": "server",
+  "name": "react-fullstack",
   "version": "1.0.0",
   "description": "a simple static web server",
   "main": "index.js",
   "scripts": {
-    "start": "export NODE_ENV=development&& export NODE_ENV_PORT=8080&& node ./index.js"
+    "start": "export NODE_ENV=production&& export NODE_ENV_PORT=8080&& node ./index.js",
+    "start:cluster": "export NODE_ENV=production&& export NODE_ENV_PORT=8080&& node ./cluster.js"
   },
   "repository": {
     "type": "git",

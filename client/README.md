@@ -48,6 +48,23 @@ to build for deployment/production.
 doing this will copy build diles to dist folder in root `dist/public` folder in the application root which will contain a full stack build
 `nodejs` application redy to deploy with its own `package.json` install node modules and run the app.
 
+### Unit Testing
+
+we are using jets and enzyme for unit testing javascript and react components. you can write unit test cases for
+each javascript module (in ES6, commonJS a module is simply a javascript file .js ). to test any module just create
+the same filename with .`spec.js` or `.spec.jsx` at the end. for example `api.service.js` => `api.service.spec.js`
+and `home.component.jsx` => `home.component.spec.jsx`
+
+tests can be run in 2 modes.
+
+1. watch mode => where you can make changes to test files and on save all the jest tests will re run.
+2. complete mode => where you start the tests and it runs to completion. no file changes are monitored in this mode.
+
+**npm scripts**
+
+- `npm run test:watch` runs the tests in watch mode. it provides some cli options which you can play with
+- `npm run test` runs tests without watch mode. these are simplte run to completion tests.
+
 **important**
 to run the built application it needs following environment variables
 

@@ -46,6 +46,22 @@ to build for deployment/production.
 doing this will create a `dist` folder in the application root which will contain a built
 `nodejs` application redy to deploy with its own `package.json` install node modules and run the app.
 
+### Unit Testing
+
+we are using jets unit testing javascript. you can write unit test cases for
+each javascript module (in ES6, commonJS a module is simply a javascript file .js ). to test any module just create
+the same filename with .`spec.js`  at the end. for example `api.service.js` => `api.service.spec.js`
+
+tests can be run in 2 modes.
+
+1. watch mode => where you can make changes to test files and on save all the jest tests will re run.
+2. complete mode => where you start the tests and it runs to completion. no file changes are monitored in this mode.
+
+**npm scripts**
+
+- `npm run test:watch` runs the tests in watch mode. it provides some cli options which you can play with
+- `npm run test` runs tests without watch mode. these are simplte run to completion tests.
+
 **important**
 to run the built application it needs following environment variables
 
@@ -103,8 +119,7 @@ its best to use vs code with the following plugins installed.
  ├── /.package-lock.json        # dependencies lock
  ├── /README.md                 # instructions and help
  ├── /LICENSE                   # license details
- ├── /CHANGELOG.md              # all changes mentioned 
-
+ ├── /CHANGELOG.md              # all changes mentioned
 ```
 
 **src folder**
