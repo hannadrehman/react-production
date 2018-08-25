@@ -38,15 +38,12 @@ jspm_packages
 
 # Dist
 dist
-**/dist
-**dist/**
-dist/**
 
 # Test shapShots
-**/__snapshots__/
+__snapshots__
 
 # jest coverage
-**/coverage/**
+coverage
 
 # cacheloader
-.cache-loader/
+.cache-loader

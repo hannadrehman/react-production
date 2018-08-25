@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "export NODE_ENV=development&& export NODE_ENV_PORT=3000&& npm run start:lint",
-    "start:lint": "nodemon ./src/index.js --exec 'npm run lint && node' ",
+    "start:lint": "nodemon ./src/cluster.js --exec 'npm run lint && node' ",
     "start:no-lint": "nodemon ./src/index.js",
     "build": "npm run test && node build.js",
     "test:watch": "npm run test -- --watchAll",

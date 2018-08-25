@@ -8,7 +8,9 @@ const indexRoute = (req, res) => {
 };
 
 const testRoute = (req, res) => {
-  res.send('Welcome to express');
+  res.send({
+    k: `Welcome to express -- worker:  ${process.pid}`,
+  });
   res.end();
 };
 

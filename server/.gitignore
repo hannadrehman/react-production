@@ -40,7 +40,7 @@ jspm_packages
 dist
 
 # Test shapShots
-**/__snapshots__/
+__snapshots__
 
 # jest coverage
 **/coverage/**

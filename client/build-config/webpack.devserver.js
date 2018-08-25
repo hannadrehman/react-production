@@ -5,7 +5,7 @@ module.exports = (dist, proxy, stats) => ({
   port: 9000,
   historyApiFallback: true,
   hot: true,
-  stats: stats ? 'errors-only' : 'none',
+  stats: stats ? 'errors-only' : true,
   overlay: true,
   proxy: {
     changeOrigin: true,
