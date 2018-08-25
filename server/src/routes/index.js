@@ -8,9 +8,8 @@ const indexRoute = (req, res) => {
 };
 
 const testRoute = (req, res) => {
-  res.send({
-    k: `Welcome to express -- worker:  ${process.pid}`,
-  });
+  console.log(process.pid); // eslint-disable-line
+  res.send('Welcome to express');
   res.end();
 };
 

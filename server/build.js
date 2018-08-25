@@ -1,7 +1,7 @@
 const shell = require('child_process').execSync;
 
 const src = './src';
-const dist = '../dist/';
+const dist = '../dist';
 
 shell(`rm -rf ${dist}`);
 shell(`mkdir -p ${dist}`);
