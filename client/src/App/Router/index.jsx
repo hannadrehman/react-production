@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch, withRouter, Redirect } from 'react-router-dom';
-import Async from 'react-code-splitting';
+import Async from 'react-asynchronous-component';
 import { ErrorHandler, AuthorizedRoute } from 'Common';
 import { ROUTE_ERROR } from 'Constants/app/app.constants';
 import authorizationRules from './constants';
