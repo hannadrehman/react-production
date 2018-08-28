@@ -2,7 +2,7 @@ import React from 'react';
 import { configure, shallow } from 'enzyme';
 import * as redux from 'redux';
 import Adapter from 'enzyme-adapter-react-16';
-import { Todo, mapStateToProps, mapDispatchToProps } from './Todo.component';
+import { Todo, mapStateToProps, mapDispatchToProps } from '../Todo.component';
 
 configure({ adapter: new Adapter() });
 

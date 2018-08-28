@@ -1,7 +1,7 @@
 import {
   Button,
   TextBoxWithButon,
-} from './index';
+} from '../index';
 
 describe('Unit test cases for Elements/index.js', () => {
   it('should export Button', () => {

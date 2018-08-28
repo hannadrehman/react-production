@@ -1,5 +1,5 @@
 
-import { simpleApiStoreStates } from './objects';
+import { simpleApiStoreStates } from '../objects';
 
 describe('Unit test cases for Services/utility/objects.js', () => {
   describe('Unit test cases for simpleApiStoreStates', () => {

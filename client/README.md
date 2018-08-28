@@ -52,8 +52,8 @@ doing this will copy build diles to dist folder in root `dist/public` folder in 
 
 we are using jets and enzyme for unit testing javascript and react components. you can write unit test cases for
 each javascript module (in ES6, commonJS a module is simply a javascript file .js ). to test any module just create
-the same filename with .`spec.js` or `.spec.jsx` at the end. for example `api.service.js` => `api.service.spec.js`
-and `home.component.jsx` => `home.component.spec.jsx`
+the same filename with .`spec.js` or `.spec.jsx` at the end. in the `__tests__` folder in the same directory, for example `api.service.js` => `__tests__/api.service.spec.js`
+and `home.component.jsx` => `__tests__/home.component.spec.jsx`
 
 tests can be run in 2 modes.
 
@@ -156,6 +156,7 @@ its best to use vs code with the following plugins installed.
 
 ```
 .
+├── /__tests__/               # Contains test files for App Component.
 ├── /Common/                  # Contains all Common Componenets which are to be shared accross the application.
 ├── /Elements/                # Elements are the Components taken from some library like Button, Accodion, Modal etc. these are wrappers over library components.
 ├── /Layout/                  # Layout component declares the application lyout. ex navbar,body, footer, side pan. which defines the app lyaout.
@@ -221,16 +222,13 @@ here is a template for a component folder structure.
 
 ```
 ComponentName
+    ├── /__tests__/                        # contains all unit test cases files corrosponding to component, actions, reducer, operations, utility.
     ├── /Components                        # Child components that may be used by this component, which may be not be common.
     ├── /ComponentName.actionNames.js      # Action names for the component
     ├── /ComponentName.actions.js          # Action creators for the componentName
-    ├── /ComponentName.actions.spec.js     # Test files for actions.js
     ├── /ComponentName.component.jsx       # React component decleration
-    ├── /ComponentName.component.spec.js   # Test files component
     ├── /ComponentName.reducer.js          # Reducer for the component
-    ├── /ComponentName.reducer.spec.js     # Test file Reducer for the component
     ├── /ComponentName.operations.js       # operations for component
-    ├── /ComponentName.operations.spec.js  # Test file Operation for the component
     ├── /ComponentName.styles.scss         # Styles for the component
     ├── /ComponentName.utility.js          # utility methods which do not belong to the component
 ```
@@ -239,6 +237,7 @@ if the component does not need redux actions and seperate store then
 
 ```
 ComponentName
+    ├── /__tests__/                        # contains all unit test cases files corrosponding to component, actions, reducer, operations, utility.
     ├── /Components                        # Child components that may be used by this component, which may be not be common.
     ├── /ComponentName.component.jsx       # React component decleration
     ├── /ComponentName.component.spec.js   # Test files component

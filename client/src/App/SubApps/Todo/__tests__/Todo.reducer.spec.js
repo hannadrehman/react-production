@@ -1,5 +1,5 @@
-import todoReducer from './Todo.reducer';
-import todoActionNames from './Todo.actionNames';
+import todoReducer from '../Todo.reducer';
+import todoActionNames from '../Todo.actionNames';
 
 describe('Unit test cases for Todo.reducer.js', () => {
   describe('Unit test cases for todoReducer', () => {

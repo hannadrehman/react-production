@@ -1,5 +1,5 @@
 import * as objectUtils from 'Services/utility/objects';
-import { userReducer, appReducer } from './reducer';
+import { userReducer, appReducer } from '../reducer';
 
 describe('Unit Test cases for App/reducer.js', () => {
   describe('Unit test cases for userReducer', () => {

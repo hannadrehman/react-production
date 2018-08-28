@@ -7,7 +7,7 @@ import {
   globalFetchUserProfileExtrasLoading,
   globalFetchUserProfileExtrasSuccess,
   globalFetchUserProfileExtrasFailure,
-} from './actions';
+} from '../actions';
 
 describe('Unit test cases for App/actions.js', () => {
   describe('Unit test cases for fetchUserProfile creators', () => {

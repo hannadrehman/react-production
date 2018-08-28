@@ -1,5 +1,5 @@
-import { todoAddTodo, todoRemoveTodo } from './Todo.actions';
-import todoActionNames from './Todo.actionNames';
+import { todoAddTodo, todoRemoveTodo } from '../Todo.actions';
+import todoActionNames from '../Todo.actionNames';
 
 describe('Unit test cases for Todo.actions.js', () => {
   describe('unit test cases for Todo Action Creators', () => {
