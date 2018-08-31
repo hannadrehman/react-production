@@ -19,11 +19,14 @@ export default function configureStore() {
   );
   sagaMiddleWare.run(rootSaga);
   /* global module:true */
-  if (module.hot) {
-    module.hot.accept('./combinedReducer', () => {
-            const nextReducer = require('./combinedReducer').default; // eslint-disable-line
-      store.replaceReducer(nextReducer);
-    });
+  /* global process:true */
+  if (process.env.NODE_ENV === 'developmemnt') {
+    if (module.hot) {
+      module.hot.accept('./combinedReducer', () => {
+              const nextReducer = require('./combinedReducer').default; // eslint-disable-line
+        store.replaceReducer(nextReducer);
+      });
+    }
   }
 
   return store;
