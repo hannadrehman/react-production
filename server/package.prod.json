@@ -21,8 +21,9 @@
   "dependencies": {
     "compression": "^1.7.3",
     "express": "^4.16.3",
-    "helmet": "^3.12.2",
+    "helmet": "^3.13.0",
     "http-proxy-middleware": "^0.18.0",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "request": "^2.88.0"
   }
 }

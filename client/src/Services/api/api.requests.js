@@ -13,6 +13,7 @@ import {
   ALL_LANGUAGES,
   BOOK_AUTOMATIC_CONSULTATION,
   APP_LOGIN,
+  MEMES,
 } from '../../Constants/api/api.endpoints';
 
 export const login = user => httpPost(APP_LOGIN, user);
@@ -28,3 +29,4 @@ export const bookslot = (request, withSlot) => (
   withSlot === true ? httpPost(BOOK_SLOT, request) : httpPost(BOOK_SLOT_PREFERED_TIME, request));
 export const languagues = () => httpGet(ALL_LANGUAGES);
 export const automaticConsultation = request => httpPost(BOOK_AUTOMATIC_CONSULTATION, request);
+export const memes = () => httpGet(MEMES);

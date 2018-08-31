@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
-import { Button } from 'Elements';
-import { AuthorizedOnly } from 'Common';
+import { withRouter, Link } from 'react-router-dom';
 import './Home.styles.scss';
 
 class Home extends React.Component {
@@ -21,17 +19,12 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home home__wrapper">
-        <h1>
-           hello sir
-        </h1>
-        <section>
-          <Button label="primary" onClick={() => { }} />
-          <AuthorizedOnly allowedRoles={['a', 'b']} user={{ role: 'a' }}>
-            <h1>
-               hel
-                hello authorized
-            </h1>
-          </AuthorizedOnly>
+        <section className="home__mains margin margin--auto margin-top--xxlg flex flex--col flex--center">
+          <h1>Do you want to see a very bad grid of original Memes ?</h1>
+          <img src="https://i.kym-cdn.com/photos/images/original/000/210/119/9b3.png" alt="meme" />
+          <h1>
+            <Link href="meme" to="meme">click Meme lord</Link>
+          </h1>
         </section>
       </div>
     );

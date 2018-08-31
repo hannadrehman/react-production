@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Layout, Menu, Breadcrumb,
+  Layout, Menu,
 } from 'antd';
 import { Link } from 'react-router-dom';
 import Routes from 'Router';
@@ -37,7 +37,7 @@ render() {
       <Header>
         <Link href="/" to="/">
           <p className="logo">
-            Refund Manager
+            React Production
           </p>
         </Link>
         <Menu
@@ -54,7 +54,7 @@ render() {
         </Menu>
       </Header>
       <Content style={{ padding: '0 50px' }}>
-        <Breadcrumb style={{ margin: '16px 0' }}>
+        {/* <Breadcrumb style={{ margin: '16px 0' }}>
           <Breadcrumb.Item>
             Home
           </Breadcrumb.Item>
@@ -64,7 +64,7 @@ render() {
           <Breadcrumb.Item>
             App
           </Breadcrumb.Item>
-        </Breadcrumb>
+        </Breadcrumb> */}
         <div className="applayout--content">
           <Routes shouldRender user={user} />
         </div>

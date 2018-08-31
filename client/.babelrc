@@ -1,25 +1,7 @@
 {
   "presets": [
-    [
-      "env",
-      {
-        "modules": false
-      }
-    ],
-    "react",
-    [
-      "env",
-      {
-        "useBuiltIns": true,
-        "targets": {
-          "node": "4.3"
-        },
-        "exclude": [
-          "transform-async-to-generator",
-          "transform-regenerator"
-        ]
-      }
-    ]
+    [ "env", {  "modules": false  } ],
+    "react"
   ],
   "plugins": [
     "react-hot-loader/babel",
@@ -31,7 +13,7 @@
       {
         "libraryName": "antd",
         "libraryDirectory": "es",
-        "style": true
+        "style": false
       }
     ],
     [

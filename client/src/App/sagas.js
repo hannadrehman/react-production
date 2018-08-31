@@ -4,6 +4,8 @@ import {
 import globalActions from './actionNames';
 import { fetchUserProfileExtraSaga, fetchUserProfileSaga } from './operations';
 
+import subAppsSagas from './SubApps/SubApps.sagas';
+
 function* watchUserProfile() {
   yield all([
     takeEvery(globalActions.FETCH_USER_PROFILE, fetchUserProfileSaga),
@@ -13,6 +15,7 @@ function* watchUserProfile() {
 function* rootSaga() {
   yield all([
     fork(watchUserProfile),
+    fork(subAppsSagas),
   ]);
 }
 

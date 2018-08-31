@@ -2,4 +2,10 @@
   &_wrapper {
     position: relative;
   }
+  &__mains{
+    width: 80%;
+    height: 300px;
+    border-radius: 30px;
+    background-color: white;
+  }
 }

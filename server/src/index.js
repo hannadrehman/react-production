@@ -8,6 +8,7 @@ const { NODE_ENV, NODE_ENV_PORT } = require('./config');
 const proxies = require('./proxy');
 const { indexRoute, testRoute, fallbackRoute } = require('./routes');
 const { serverListener } = require('./utility/listener');
+const api = require('./api');
 
 const appConfig = (app) => {
   app.use('/', express.static(path.resolve(__dirname, './public')));
@@ -18,6 +19,7 @@ const appConfig = (app) => {
 const appRroutes = (app) => {
   app.get('/', indexRoute);
   app.get('/test', testRoute);
+  app.use('/apiv2', api);
   app.get('/*', fallbackRoute);
 };
 const appProxy = (app) => {

@@ -36,7 +36,7 @@ build with react,redux,sagas, and build by webpack.
 ### start
 
 after installing all modules hit `npm start`
-this will run the applications in `watch` mode. meaning any file change will be reacted and updated
+this will run the applications in `watch` mode. meaning any file change will be reacted and updated`
 in the browser. (Hot module replacement)
 
 ### build

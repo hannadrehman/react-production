@@ -12,6 +12,8 @@ const AsyncHome = props => (<Async componentProps={props} load={import('SubApps/
 const AsyncProfile = props => (<Async componentProps={props} load={import('SubApps/Profile/Profile.component' /* webpackChunkName: "profile" */)} />);
 const AsyncErrorPage = props => (<Async componentProps={props} load={import('SubApps/ErrorPage/ErrorPage.component' /* webpackChunkName: "errorpage" */)} />);
 const AsyncTodo = props => (<Async componentProps={props} load={import('SubApps/Todo/Todo.component'/* webpackChunkName: "todo" */)} />);
+const AsyncMemePage = () => (<Async load={import('SubApps/MemePage/MemePage.component'/* webpackChunkName: "memepage" */)} />);
+
 const Routes = ({ user, shouldRender }) => (
   <div className="routes-wrapper">
     <ErrorHandler>
@@ -22,6 +24,7 @@ const Routes = ({ user, shouldRender }) => (
         <AuthorizedRoute exact path="/profile" roles={authorizationRules['*']} component={AsyncProfile} user={user} />
         <AuthorizedRoute exact path="/error/:type" roles={authorizationRules.error} component={AsyncErrorPage} user={user} />
         <AuthorizedRoute exact path="/todo" roles={authorizationRules['*']} component={AsyncTodo} />
+        <AuthorizedRoute exact path="/meme" roles={authorizationRules['*']} component={AsyncMemePage} />
         <Redirect to={`/error/${ROUTE_ERROR.NOT_FOUND}`} />
       </Switch>
       )}

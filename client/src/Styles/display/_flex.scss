@@ -1,4 +1,4 @@
-.fl {
+.flex {
   display: flex;
   &--col {
     flex-direction: column;
@@ -9,6 +9,7 @@
   &--center {
     align-content: center;
     align-items: center;
+    justify-content: center;
   }
   &--item-center {
     align-items: center;

@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run start:dev",
-    "start:dev": "npm run dev-server --   --mode development --env.NODE_ENV=development --env.PROXY_ORIGIN=http://localhost:8000",
+    "start:dev": "npm run dev-server --   --mode development --env.NODE_ENV=development --env.PROXY_ORIGIN=http://localhost:3000",
     "start:stage": "npm run dev-server --  --mode development --env.NODE_ENV=development --env.PROXY_ORIGIN=https://x123healthifyme.com",
     "start:dev-min": "npm run start:dev -- --env.MIN_STATS=true",
     "start:analyze-speed": "npm run start:dev -- --env.addons=speedmeasure",

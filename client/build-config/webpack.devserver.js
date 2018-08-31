@@ -14,6 +14,11 @@ module.exports = (dist, proxy, stats) => ({
       secure: false,
       changeOrigin: true,
     },
+    '/apiv2/**': {
+      target: proxy,
+      secure: false,
+      changeOrigin: true,
+    },
     '/static/**': {
       target: proxy,
       secure: false,
