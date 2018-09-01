@@ -19,6 +19,6 @@ module.exports = {
     //   path: `${appPath.distPath}manifest.json`,
     //   context: __dirname,
     // }),
-    // new HardSourceWebpackPlugin()
+    // new HardSourcepWebpackPlugin()
   ],
 };
