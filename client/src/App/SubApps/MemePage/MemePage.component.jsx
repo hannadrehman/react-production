@@ -10,6 +10,8 @@ import MemeGrid from './Components/MemeGrid/MemeGrid.component';
 
 import { findMemeInMatrix } from './MemePage.utility';
 
+import './MemePage.styles.scss';
+
 class MemePage extends React.Component {
   static propTypes = {
     memes: PropTypes.object.isRequired,

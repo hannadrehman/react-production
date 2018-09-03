@@ -17,6 +17,7 @@
   },
   "settings": {
     "import/resolver": {
+      "node": {},
       "babel-module": {
         "root": ["./src"],
         "alias": {
