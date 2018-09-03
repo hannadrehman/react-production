@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Input } from 'antd';
 
 const { Search } = Input;
-
 class TextBoxWithButton extends React.Component {
   static propTypes = {
     placeholder: PropTypes.string.isRequired,
