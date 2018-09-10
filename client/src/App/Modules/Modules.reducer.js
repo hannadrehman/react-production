@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import todoReducer from './Todo/Todo.reducer';
-import memePageReducer from './MemePage/MemePage.reducer';
+import todoReducer from 'App/Modules/Todo/Todo.reducer';
+import memePageReducer from 'App/Modules/MemePage/MemePage.reducer';
 
 const homeReducer = () => ({});
 

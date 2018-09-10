@@ -3,6 +3,7 @@ import TextBoxWithButon from './TextBox/TextBoxWithButton/TextBoxWithButton.comp
 import TextBoxWithAddons from './TextBox/TextBoxWithAddons/TextBoxWithAddons.component';
 import TextArea from './TextBox/TextArea/TextArea.component';
 import Spinner from './Spinner/Spinner.component';
+import SkeletonLoader from './SkeletonLoader/SkeletonLoader.component';
 import Row from './Grid/Row/Row.component';
 import Col from './Grid/Col/Col.component';
 import Alert from './Alert/Alert.component';
@@ -13,6 +14,8 @@ import SimpleListWithAction from './List/SimpleListWithAction/SimpleListWithActi
 import Message from './Message/Message.component';
 import CardWithImage from './Card/CardWithImage/CardWithImage.component';
 import SimpleModal from './Modal/SimpleModal/SimpleModal.component';
+import ToolTip from './ToolTip/ToolTip.component';
+import DatePicker from './DateTimePickers/DatePicker/DatePicker.component';
 
 const Grid = {
   Row,
@@ -24,6 +27,7 @@ export {
   TextBoxWithAddons,
   TextArea,
   Spinner,
+  SkeletonLoader,
   Grid,
   Alert,
   DropDown,
@@ -33,4 +37,6 @@ export {
   Message,
   CardWithImage,
   SimpleModal,
+  ToolTip,
+  DatePicker,
 };
