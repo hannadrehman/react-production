@@ -10,7 +10,9 @@
     "plugin:import/errors",
     "plugin:import/warnings"
   ],
-  "globals": {},
+  "globals": {
+    "module": true
+  },
   "parser": "babel-eslint",
   "rules": {
     "react/forbid-prop-types": [false, { "forbid": ["array","object"]}]
@@ -22,7 +24,7 @@
         "root": ["./src"],
         "alias": {
           "App": "./src/App",
-          "SubApps": "./src/App/SubApps",
+          "Modules": "./src/App/Modules",
           "Common": "./src/App/Common",
           "Router": "./src/App/Router",
           "Elements": "./src/App/Elements",

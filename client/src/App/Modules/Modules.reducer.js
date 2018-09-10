@@ -4,10 +4,10 @@ import memePageReducer from './MemePage/MemePage.reducer';
 
 const homeReducer = () => ({});
 
-const subAppsReducer = combineReducers({
+const modulesReducer = combineReducers({
   home: homeReducer,
   todo: todoReducer,
   meme: memePageReducer,
 });
 
-export default subAppsReducer;
+export default modulesReducer;

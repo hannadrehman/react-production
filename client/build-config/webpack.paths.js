@@ -13,7 +13,7 @@ module.exports = {
   },
   pathAliases: {
     App: path.resolve(__dirname, '../', './src/App'),
-    SubApps: path.resolve(__dirname, '../', './src/App/SubApps'),
+    Modules: path.resolve(__dirname, '../', './src/App/Modules'),
     Router: path.resolve(__dirname, '../', './src/App/Router'),
     Common: path.resolve(__dirname, '../', './src/App/Common'),
     Elements: path.resolve(__dirname, '../', './src/App/Elements'),

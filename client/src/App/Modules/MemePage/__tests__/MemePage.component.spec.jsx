@@ -45,7 +45,7 @@ describe('unit test cases for MemePage.component.jsx ', () => {
     });
   });
   describe('MemePage props memePageFetchMemesAction', () => {
-    let wrapper = {};
+    let wrapper = {}; // eslint-disable-line
     let props = {};
     beforeEach(() => {
       props = {
@@ -187,7 +187,7 @@ describe('unit test cases for MemePage.component.jsx ', () => {
   describe('mapStateToProps, mapDispatchToProps', () => {
     it('should return state variables', () => {
       const propsFromState = mapStateToProps({
-        subApps: {
+        modules: {
           meme: {
             pupularMemes: {
               loading: false,

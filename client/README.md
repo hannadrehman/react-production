@@ -161,7 +161,7 @@ its best to use vs code with the following plugins installed.
 ├── /Elements/                # Elements are the Components taken from some library like Button, Accodion, Modal etc. these are wrappers over library components.
 ├── /Layout/                  # Layout component declares the application lyout. ex navbar,body, footer, side pan. which defines the app lyaout.
 ├── /Router/                  # Router component imports react router and declares the routing for the sub apps. all the routing should be registered here. and lyout will import router
-├── /SubApps                  # SubApps are independent apps which in most of the cases is a PAGE or Router ex Home, Profile,Chat,Massenger etc.
+├── /Modules                  # Modules are independent apps which in most of the cases is a PAGE or Router ex Home, Profile,Chat,Massenger etc.
 ├── /actionNames.js/          # Contains all App level action Names for the redux
 ├── /actions.js/              # Contains all redux actions on app level.
 ├── /action.spec.js           # Tests fir actions
@@ -275,7 +275,7 @@ Store
   ├    ├──UserProfile
   ├    ├──UserConfiguration
   ├    ├──UserConrexr
-  ├── SubApps                # Seperate store for each sub application/routes
+  ├── Modules                # Seperate store for each sub application/routes
   ├    ├──Home
   ├    ├──Profile
   ├    ├──Todo

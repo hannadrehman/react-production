@@ -46,7 +46,7 @@ class Todo extends React.Component {
   }
 }
 const mapStateToProps = store => ({
-  todos: store.subApps.todo.todos,
+  todos: store.modules.todo.todos,
 });
 const mapDispatchToProps = dispatch => bindActionCreators({
   addToDoAction: todoAddTodo,

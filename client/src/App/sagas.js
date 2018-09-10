@@ -1,10 +1,10 @@
 import {
   fork, all, takeEvery,
 } from 'redux-saga/effects';
+import modulesSagas from 'Modules/Modules.sagas';
 import globalActions from './actionNames';
 import { fetchUserProfileExtraSaga, fetchUserProfileSaga } from './operations';
 
-import subAppsSagas from './SubApps/SubApps.sagas';
 
 function* watchUserProfile() {
   yield all([
@@ -15,7 +15,7 @@ function* watchUserProfile() {
 function* rootSaga() {
   yield all([
     fork(watchUserProfile),
-    fork(subAppsSagas),
+    fork(modulesSagas),
   ]);
 }
 

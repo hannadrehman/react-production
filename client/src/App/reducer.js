@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import globalActionNames from './actionNames';
-import subAppsReducer from './SubApps/SubApps.reducer';
+import modulesReducer from './Modules/Modules.reducer';
 import { simpleApiStoreStates } from '../Services/utility/objects';
 
 const defaultState = {
@@ -43,7 +43,7 @@ const appReducer = (state = defState, actions) => {
 };
 const reducer = combineReducers({
   user: userReducer,
-  subApps: subAppsReducer,
+  modules: modulesReducer,
   app: appReducer,
 });
 export { userReducer, appReducer };

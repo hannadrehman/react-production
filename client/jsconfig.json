@@ -3,7 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "App": ["./src/App/"],
-      "SubApps": ["./src/App/SubApps"],
+      "Modules": ["./src/App/Modules"],
       "Common": ["./src/App/Common"],
       "Router": ["./src/App/Router"],
       "Elements": ["./src/App/Elements"],

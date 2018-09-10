@@ -8,11 +8,11 @@ import authorizationRules from './constants';
 
 import './styles.scss';
 
-const AsyncHome = props => (<Async componentProps={props} load={import('SubApps/Home/Home.component' /* webpackChunkName: "home" */)} />);
-const AsyncProfile = props => (<Async componentProps={props} load={import('SubApps/Profile/Profile.component' /* webpackChunkName: "profile" */)} />);
-const AsyncErrorPage = props => (<Async componentProps={props} load={import('SubApps/ErrorPage/ErrorPage.component' /* webpackChunkName: "errorpage" */)} />);
-const AsyncTodo = props => (<Async componentProps={props} load={import('SubApps/Todo/Todo.component'/* webpackChunkName: "todo" */)} />);
-const AsyncMemePage = () => (<Async load={import('SubApps/MemePage/MemePage.component'/* webpackChunkName: "memepage" */)} />);
+const AsyncHome = props => (<Async componentProps={props} load={import('Modules/Home/Home.component' /* webpackChunkName: "home" */)} />);
+const AsyncProfile = props => (<Async componentProps={props} load={import('Modules/Profile/Profile.component' /* webpackChunkName: "profile" */)} />);
+const AsyncErrorPage = props => (<Async componentProps={props} load={import('Modules/ErrorPage/ErrorPage.component' /* webpackChunkName: "errorpage" */)} />);
+const AsyncTodo = props => (<Async componentProps={props} load={import('Modules/Todo/Todo.component'/* webpackChunkName: "todo" */)} />);
+const AsyncMemePage = () => (<Async load={import('Modules/MemePage/MemePage.component'/* webpackChunkName: "memepage" */)} />);
 
 const Routes = ({ user, shouldRender }) => (
   <div className="routes-wrapper">

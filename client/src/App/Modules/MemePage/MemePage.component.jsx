@@ -90,7 +90,7 @@ class MemePage extends React.Component {
 }
 
 const mapStateToProps = store => ({
-  memes: store.subApps.meme.pupularMemes,
+  memes: store.modules.meme.pupularMemes,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({

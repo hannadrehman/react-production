@@ -11,5 +11,4 @@ export const COACH_FILTERS = [
   { id: 0, value: 'Diet Consultant' },
   { id: 1, value: 'Fitness Trainer' },
   { id: 2, value: 'Yoga Instructor' },
-
 ];

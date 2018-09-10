@@ -66,7 +66,7 @@ describe('Unit Test cases for Todo.component.jsx', () => {
       expect(reactElements).toBeDefined();
     });
     it('should return state variables', () => {
-      const propsFromState = mapStateToProps({ subApps: { todo: { todos: [] } } });
+      const propsFromState = mapStateToProps({ modules: { todo: { todos: [] } } });
       expect(propsFromState.todos).toEqual([]);
     });
     it('should return dispatch props', () => {
