@@ -55,7 +55,7 @@ module.exports = env => ({
       filename: 'css/[name].css',
       allChunks: true,
     }),
-    new PurifyCSSPlugin({ paths: glob.sync(`${appPaths.srcPath}/**/*.js`, { nodir: true }) }),
+    new PurifyCSSPlugin({ paths: glob.sync(`${appPaths.srcPath}/**/*.jsx`, { nodir: true }) }),
   ],
   optimization: {
     splitChunks: {
