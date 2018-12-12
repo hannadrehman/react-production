@@ -9,7 +9,7 @@ const path = require('path');
 const UglifyJsWebpackPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const appPaths = require('./webpack.paths');
-const appModule = require('./webpack.modules');
+const appModule = require('./webpack.loaders');
 
 module.exports = env => ({
   module: appModule(env).module,

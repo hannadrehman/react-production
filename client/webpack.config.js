@@ -1,12 +1,12 @@
 /* eslint-env node */
 const webpackMerge = require('webpack-merge');
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
-const commonConfig = require('./build-config/webpack.commons');
-const commongPlugins = require('./build-config/webpack.commonPlugins');
-const prodConfig = require('./build-config/webpack.production');
-const devConfig = require('./build-config/webpack.development');
-const bundleanalyzer = require('./build-config/addons/webpack.bundleanalyzer');
-const bundleBuddy = require('./build-config/addons/webpack.bundlebuddy');
+const commonConfig = require('./webpack-config/webpack.commons');
+const commongPlugins = require('./webpack-config/webpack.commonPlugins');
+const prodConfig = require('./webpack-config/webpack.production');
+const devConfig = require('./webpack-config/webpack.development');
+const bundleanalyzer = require('./webpack-config/addons/webpack.bundleanalyzer');
+const bundleBuddy = require('./webpack-config/addons/webpack.bundlebuddy');
 
 
 module.exports = (env) => {

@@ -1,6 +1,5 @@
 /* eslint-env node */
 const path = require('path');
-const AntdScssThemePlugin = require('antd-scss-theme-plugin');
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const cssnano = require('cssnano');
@@ -48,10 +47,6 @@ module.exports = (env) => {
             !isProd ? 'style-loader' : MiniCssExtractPlugin.loader,
             {
               loader: 'css-loader',
-              options: {
-                include: path.resolve(__dirname, '../', './src'),
-                sourceMap: false,
-              },
             },
             {
               loader: 'postcss-loader',
@@ -71,10 +66,6 @@ module.exports = (env) => {
             !isProd ? 'style-loader' : MiniCssExtractPlugin.loader,
             {
               loader: 'css-loader',
-              options: {
-                sourceMap: false,
-                include: path.resolve(__dirname, '../', './src'),
-              },
             },
             {
               loader: 'postcss-loader',
@@ -86,15 +77,15 @@ module.exports = (env) => {
                 },
               },
             },
-            AntdScssThemePlugin.themify({
+            {
               loader: (isProd) ? 'sass-loader' : 'fast-sass-loader',
               options: {
                 processCssUrls: false,
                 sourceMap: false,
                 include: path.resolve(__dirname, '../', './src'),
-                data: '@import "~Styles/themes/core";@import "~Styles/themes/anttheme";',
+                data: '@import "~Styles/themes/core";',
               },
-            }),
+            },
           ],
         },
         // extra loader only because of antd designs
@@ -104,10 +95,6 @@ module.exports = (env) => {
             !isProd ? 'style-loader' : MiniCssExtractPlugin.loader,
             {
               loader: 'css-loader',
-              options: {
-                sourceMap: false,
-                include: path.resolve(__dirname, '../', './src'),
-              },
             },
             {
               loader: 'postcss-loader',
@@ -119,13 +106,17 @@ module.exports = (env) => {
                 },
               },
             },
-            AntdScssThemePlugin.themify({
+            {
               loader: 'less-loader',
               options: {
                 include: path.resolve(__dirname, '../', './src'),
                 sourceMap: false,
+                modifyVars: {
+
+                },
+                javascriptEnabled: true,
               },
-            }),
+            },
           ],
         },
         {
