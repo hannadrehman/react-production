@@ -25,7 +25,7 @@
     "axios": "^0.18.0",
     "connected-react-router": "^5.0.1",
     "history": "^4.7.2",
-    "moment": "^2.22.2",
+    "moment": "^2.23.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-asynchronous-component": "^1.0.2",

@@ -29,6 +29,7 @@ module.exports = env => ({
         context: './',
       },
     }),
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new HtmlWebpackPlugin({
       title: appPaths.appTitle,
       filename: 'index.html',
