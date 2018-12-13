@@ -7,7 +7,6 @@ const babelConfig = (api) => {
     plugins: [
       ['import', { libraryName: 'antd', libraryDirectory: 'es', style: false }],
       '@babel/plugin-syntax-dynamic-import',
-      'react-hot-loader/babel',
       '@babel/plugin-proposal-object-rest-spread',
       '@babel/plugin-proposal-class-properties',
       [
@@ -35,6 +34,9 @@ const babelConfig = (api) => {
     config.presets.splice(0, 1, ['@babel/preset-env']);
     config.plugins.splice(0, 1, ['import', { libraryName: 'antd' }]);
     config.plugins.push('@babel/plugin-transform-modules-commonjs');
+  }
+  if (api.env('development')) {
+    config.plugins.push('react-hot-loader/babel');
   }
   return config;
 };

@@ -25,6 +25,7 @@ module.exports = env => ({
     new HtmlWebpackPlugin({
       title: appPaths.appTitle,
       filename: 'index.html',
+      publicPath: env.PUBLIC_PATH,
       template: './src/index.ejs',
       inject: true,
     }),
@@ -38,5 +39,5 @@ module.exports = env => ({
     }),
     new ErrorOverlayPlugin(),
   ],
-  devServer: devServer(appPaths.distPath, env.PROXY_ORIGIN, env.MIN_STATS, env.publicPath),
+  devServer: devServer(appPaths.distPath, env.PROXY_ORIGIN, env.MIN_STATS, env.PUBLIC_PATH),
 });

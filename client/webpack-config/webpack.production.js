@@ -34,6 +34,7 @@ module.exports = env => ({
       title: appPaths.appTitle,
       filename: 'index.html',
       template: './src/index.ejs',
+      publicPath: env.PUBLIC_PATH,
       minify: {
         removeComments: true,
         collapseWhitespace: false,
