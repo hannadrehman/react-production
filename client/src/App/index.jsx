@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Provider, connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { HashRouter as Router } from 'react-router-dom'; // BrowserRouter For HTML 5 Routing, HashRouter
+import { ConnectedRouter } from 'connected-react-router';
 import Layout from './Layout';
 import { globalFetchUserProfile, globalFetchUserProfileExtras } from './actions';
 import 'Styles/global.scss';
@@ -10,6 +10,7 @@ import 'Styles/global.scss';
 class App extends React.Component {
   static propTypes = {
     store: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired,
     profile: PropTypes.object.isRequired,
     globalFetchUserProfileAction: PropTypes.func.isRequired,
     globalFetchUserProfileExtrasAction: PropTypes.func.isRequired,
@@ -26,14 +27,14 @@ class App extends React.Component {
   }
 
   render() {
-    const { store, profile } = this.props;
+    const { store, profile, history } = this.props;
     return (
       <main className="app-wrapper">
-        <Router>
-          <Provider store={store}>
+        <Provider store={store}>
+          <ConnectedRouter history={history}>
             <Layout user={profile} />
-          </Provider>
-        </Router>
+          </ConnectedRouter>
+        </Provider>
       </main>
     );
   }

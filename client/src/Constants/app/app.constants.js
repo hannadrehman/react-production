@@ -1,11 +1,12 @@
 /* global process:true */
-const { API_KEY, PROXY_USER, PROXY_USER_META } = process.env;
-export const DEV_ORIGIN = 'http://localhost:9000';
-export const DEV_NAVI_HEALTH_ORIGIN = 'http://localhost:8000';
-export const STAGE_ORIGIN = 'https://x123healthifyme.com';
+const {
+  API_KEY, PROXY_USER, PROXY_USER_META, NODE_ENV,
+} = process.env;
 export const STAGE_ACCESS = window.atob(API_KEY || '');
 export const USER_ONE_NAME = window.atob(PROXY_USER || '');
 export const USER_ONE_PAS = window.atob(PROXY_USER_META || '');
+export const isDev = NODE_ENV.trim().toLocaleLowerCase() === 'development';
+
 export const ROUTE_ERROR = {
   INVALID_ROUTE: 'INVALID_ROUTE',
   FORBIDDEN: 'FORBIDDEN',

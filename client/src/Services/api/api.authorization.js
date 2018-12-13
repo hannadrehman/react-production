@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 import {
-  DEV_ORIGIN, USER_ONE_NAME, USER_ONE_PAS, STAGE_ORIGIN, STAGE_ACCESS,
+  USER_ONE_NAME, USER_ONE_PAS, STAGE_ACCESS,
 } from 'Constants/app/app.constants';
 import { APP_LOGIN } from '../../Constants/api/api.endpoints';
 
@@ -27,7 +27,7 @@ export const getNewApiUrl = (url) => {
   if (!process.env.PROXY_ORIGIN) { return url; }
   let auth;
   let newUrl = url;
-  if (process.env.PROXY_ORIGIN === STAGE_ORIGIN) {
+  if (process.env.PROXY_ORIGIN) {
     auth = STAGE_ACCESS;
     if (url.indexOf('?') === -1) {
       newUrl = `${newUrl}?${auth}`;
@@ -47,7 +47,7 @@ export const getApiHeaders = () => ({
   'X-CSRFToken': getCsrfToken(),
 });
 // will allow login only when we are proxying to stage and is on Dev url
-if (window.location.origin === DEV_ORIGIN && process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'development') {
   window.attemptLogin = () => axios.post(APP_LOGIN, {
     username: USER_ONE_NAME, password: USER_ONE_PAS,
   })
