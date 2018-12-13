@@ -1,5 +1,5 @@
 /* eslint-env node */
-module.exports = (dist, proxy, stats) => ({
+module.exports = (dist, proxy, stats, publicPath) => ({
   contentBase: dist,
   compress: true,
   port: 9000,
@@ -7,6 +7,7 @@ module.exports = (dist, proxy, stats) => ({
   hot: true,
   stats: stats ? 'errors-only' : true,
   overlay: true,
+  publicPath,
   proxy: {
     changeOrigin: true,
     '/api/**': {

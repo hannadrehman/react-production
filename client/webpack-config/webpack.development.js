@@ -38,5 +38,5 @@ module.exports = env => ({
     }),
     new ErrorOverlayPlugin(),
   ],
-  devServer: devServer(appPaths.distPath, env.PROXY_ORIGIN, env.MIN_STATS),
+  devServer: devServer(appPaths.distPath, env.PROXY_ORIGIN, env.MIN_STATS, env.publicPath),
 });
