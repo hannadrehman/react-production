@@ -25,7 +25,7 @@ module.exports = env => ({
     new HtmlWebpackPlugin({
       title: appPaths.appTitle,
       filename: 'index.html',
-      publicPath: env.PUBLIC_PATH,
+      publicPath: appPaths.appBase,
       template: './src/index.ejs',
       inject: true,
     }),

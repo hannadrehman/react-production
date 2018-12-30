@@ -4,6 +4,7 @@ const path = require('path');
 module.exports = {
   distPath: path.resolve(__dirname, '../../', 'dist/public'),
   appTitle: 'React',
+  appBase: '/',
   srcPath: path.resolve(__dirname, '../', 'src'),
   cleanOptions: {
     root: path.resolve(__dirname, '../'),
